@@ -17,3 +17,7 @@ Then open http://localhost:8000 in a browser.
 - `index.html` — the entire site (single page)
 - `assets/img/avatar.jpg` — profile photo
 - `404.html` — GitHub Pages error page
+
+## Deploy
+
+Pushing to `main` publishes automatically — GitHub Pages, "Deploy from a branch": branch `main`, folder `/ (root)`. No CI pipeline.
