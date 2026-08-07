@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lyu Chang — PhD Researcher, University of Barcelona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#f4f5f7;--card:#ffffff;--ink:#16171c;--ink-soft:#565b67;--ink-faint:#8b909c;--accent:#7a2c56;--accent-tint:#f3e7ee;--line:#e5e6eb;--line-strong:#d3d5dd;--radius:14px}
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:radial-gradient(120% 55% at 88% -8%,#efe6ec 0%,rgba(239,230,236,0) 55%),var(--paper);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;min-height:100vh;display:flex;justify-content:center;padding:30px 18px 44px}
+  .card{width:100%;max-width:480px}
+  .hero{margin-bottom:22px}
+  .avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;margin:0 0 16px;border:3px solid #fff;box-shadow:0 0 0 2px var(--accent),0 10px 24px -12px rgba(122,44,86,.55)}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;font-weight:500;line-height:1.55}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(30px,9vw,42px);line-height:1.02;letter-spacing:-.02em;margin:0}
+  .cn{font-size:.5em;font-weight:500;color:var(--ink-faint);letter-spacing:.05em;margin-left:.5em;vertical-align:.12em}
+  .role{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:16px;color:var(--ink);margin:12px 0 0;line-height:1.35}
+  .role b{color:var(--accent);font-weight:600}
+  .affil{font-size:13.5px;color:var(--ink-soft);margin:6px 0 0}
+  .project{font-size:12px;color:var(--ink-soft);margin:9px 0 0;line-height:1.4}
+  .project b{color:var(--accent);font-weight:600}
+  .about{font-size:14px;color:var(--ink-soft);margin:0 0 26px}
+  .about b{color:var(--ink);font-weight:600}
+  .label{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 11px;display:flex;align-items:center;gap:10px}
+  .label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .links{display:flex;flex-direction:column;gap:9px;margin:0 0 26px}
+  .lnk{display:flex;align-items:center;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;text-decoration:none;color:var(--ink);transition:border-color .16s ease,transform .12s ease,box-shadow .16s ease}
+  .lnk:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:0 6px 18px -10px rgba(122,44,86,.5)}
+  .lnk:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ic{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-tint);color:var(--accent);display:grid;place-items:center}
+  .ic svg{width:18px;height:18px;display:block}
+  .lnk-txt{flex:1;min-width:0}
+  .lnk-txt b{display:block;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14.5px}
+  .lnk-txt small{display:block;font-size:11.5px;color:var(--ink-faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .arrow{color:var(--line-strong);flex:none;transition:color .16s ease,transform .16s ease}
+  .lnk:hover .arrow{color:var(--accent);transform:translateX(2px)}
+  .edu{display:flex;flex-direction:column;margin:0 0 26px}
+  .edu div{border-bottom:1px solid var(--line);padding:10px 2px}
+  .edu div:last-child{border-bottom:none}
+  .deg{display:block;font-weight:550;font-size:14px}
+  .edu-meta{display:block;font-size:11.5px;color:var(--ink-faint);font-family:"JetBrains Mono",monospace;letter-spacing:.02em;margin-top:3px}
+  .sup{display:flex;flex-direction:column;margin:0 0 26px}
+  .sup div{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:9px 2px}
+  .sup div:last-child{border-bottom:none}
+  .nm{font-weight:550;font-size:14.5px}
+  .rl{font-size:11px;color:var(--ink-faint);font-family:"JetBrains Mono",monospace;letter-spacing:.04em;white-space:nowrap}
+  .activity{display:flex;flex-direction:column;gap:17px;margin:0 0 8px}
+  .venue .vn{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.03em;color:var(--accent);margin:0 0 8px;font-weight:500}
+  .venue ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .venue li{font-size:13px;color:var(--ink);line-height:1.42;padding-left:15px;position:relative}
+  .venue li::before{content:"";position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--accent-tint);box-shadow:inset 0 0 0 1.5px var(--accent)}
+  .venue li span{display:block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.05em;color:var(--ink-faint);text-transform:uppercase;margin-top:3px}
+  footer{margin-top:30px;font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;color:var(--ink-faint);text-align:center}
+  @media (prefers-reduced-motion:no-preference){
+    .card>*{animation:rise .5s cubic-bezier(.2,.7,.3,1) backwards}
+    .card>:nth-child(2){animation-delay:.05s}.card>:nth-child(3){animation-delay:.1s}
+    .card>:nth-child(4){animation-delay:.15s}.card>:nth-child(5){animation-delay:.2s}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<main class="card">
+
+  <div class="hero">
+    <img class="avatar" src="assets/img/avatar.jpg" alt="Lyu Chang">
+    <p class="eyebrow">PhD Researcher · Gender &amp; Science Seminar · COVIMADI</p>
+    <h1>Lyu&nbsp;Chang</h1>
+    <p class="role">Auditing <b>large language models</b> for digital gender-based violence.</p>
+    <p class="affil">Programa de Doctorat en Física · Universitat de Barcelona</p>
+    <p class="project"><b>COVIMADI</b> — Confronting Digital Gender-Based Violence in the Classroom through Teaching Innovation</p>
+  </div>
+
+  <p class="label">Find me</p>
+  <nav class="links">
+
+    <a class="lnk" href="mailto:lychangc15@alumnes.ub.edu">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg></span>
+      <span class="lnk-txt"><b>University email</b><small>lychangc15@alumnes.ub.edu</small></span>
+      <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>
+
+    <a class="lnk" href="mailto:lyuchang0815@gmail.com">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg></span>
+      <span class="lnk-txt"><b>Personal email</b><small>lyuchang0815@gmail.com</small></span>
+      <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>
+
+    <a class="lnk" href="https://www.linkedin.com/in/lyu-chang-73ba7b326/" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg></span>
+      <span class="lnk-txt"><b>LinkedIn</b><small>Profile &amp; updates</small></span>
+      <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>
+
+    <a class="lnk" href="https://arxiv.org/abs/2608.01436" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M6 5v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5M9 9h6M9 13h6M9 17h4"/></svg></span>
+      <span class="lnk-txt"><b>arXiv</b><small>Read the paper</small></span>
+      <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>
+
+    <a class="lnk" href="https://orcid.org/0009-0000-7612-6804" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8.1 6.9a.98.98 0 1 1 0 1.96.98.98 0 0 1 0-1.96zM7.3 9.6h1.6v7.5H7.3zM10.7 9.6h3c2.36 0 3.62 1.7 3.62 3.75 0 2.23-1.55 3.75-3.7 3.75h-2.92zm1.6 1.45v4.6h1.28c1.6 0 2.4-.98 2.4-2.3 0-1.42-.86-2.3-2.4-2.3z"/></svg></span>
+      <span class="lnk-txt"><b>ORCID</b><small>0009-0000-7612-6804</small></span>
+      <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>
+
+  </nav>
+
+  <p class="label">Research</p>
+  <p class="about">
+    Research on LLM behavior in <b>digital gender-based violence</b> scenarios, focusing on
+    framing bias, victim-blaming, consent interpretation, and refusal thresholds. Methods include
+    survey-based experiments, vignette design, qualitative discourse analysis, and comparative
+    model evaluation, with an emphasis on <b>AI safety, ethics, and gender justice</b>.
+  </p>
+
+  <p class="label">Education</p>
+  <div class="edu">
+    <div><span class="deg">MSc, Comparative Social Change</span><span class="edu-meta">Trinity College Dublin &amp; University College Dublin · 2024–2025</span></div>
+    <div><span class="deg">BA, Computer Science</span><span class="edu-meta">Northeastern University, China · 2020–2024</span></div>
+  </div>
+
+  <p class="label">Supervisors</p>
+  <div class="sup">
+    <div><span class="nm">Sònia Estradé Albiol</span><span class="rl">Director · Tutor</span></div>
+    <div><span class="nm">Núria Vergés Bosch</span><span class="rl">Director</span></div>
+  </div>
+
+  <p class="label">Recent academic activity</p>
+  <div class="activity">
+    <div class="venue">
+      <p class="vn">17th ESA Conference · Warsaw · Aug 2026</p>
+      <ul>
+        <li>Automating Misogyny? Algorithmic Complicity in Digital Gender-Based Violence<span>First author</span></li>
+        <li>Confronting Digital Gender-Based Violence through Innovative Pedagogies: An Evaluation of Initial Projects and Learning Outcomes in Sociology<span>Co-author</span></li>
+      </ul>
+    </div>
+    <div class="venue">
+      <p class="vn">14th Spanish Sociology Congress (FES 2026) · Bilbao</p>
+      <ul>
+        <li>Algorithms that Justify Abuse: How LLMs Echo the Perpetrator&rsquo;s Voice<span>First author</span></li>
+        <li>Aprendizajes del alumnado de sociología al confrontar las violencias machistas digitales mediante metodologías de innovación docente con COVIMADI<span>Co-author</span></li>
+        <li>Aulas de Sociología proyectando soluciones a las Violencias Machistas: un análisis de los proyectos del alumnado con metodologías de innovación docente de COVIMADI<span>Co-author</span></li>
+      </ul>
+    </div>
+    <div class="venue">
+      <p class="vn">Historical Materialism · Barcelona · 2026</p>
+      <ul><li>Confrontant les Violències Masclistes Digitals des de les aules de Sociologia<span>Co-author</span></li></ul>
+    </div>
+    <div class="venue">
+      <p class="vn">Gender &amp; Science Seminar · UB Physics · Apr 2026</p>
+      <ul><li>Doctoral research on AI and digital gender-based violence<span>Invited talk</span></li></ul>
+    </div>
+  </div>
+
+  <footer>Universitat de Barcelona</footer>
+
+</main>
+</body>
+</html>
