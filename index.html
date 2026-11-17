@@ -53,6 +53,16 @@
   .venue li{font-size:13px;color:var(--ink);line-height:1.42;padding-left:15px;position:relative}
   .venue li::before{content:"";position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--accent-tint);box-shadow:inset 0 0 0 1.5px var(--accent)}
   .venue li span{display:block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.05em;color:var(--ink-faint);text-transform:uppercase;margin-top:3px}
+  .papers{display:flex;flex-direction:column;gap:12px;margin:0 0 26px}
+  .paper{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;text-decoration:none;color:var(--ink);transition:border-color .16s ease,transform .12s ease,box-shadow .16s ease}
+  a.paper:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:0 6px 18px -10px rgba(122,44,86,.5)}
+  a.paper:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .paper b{display:block;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14.5px;line-height:1.3}
+  .paper .au{display:block;font-size:12px;color:var(--ink-soft);margin-top:5px}
+  .paper .au u{text-decoration:none;color:var(--ink);font-weight:600}
+  .paper .fd{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:7px;line-height:1.45}
+  .paper .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-tint);border-radius:6px;padding:2px 7px;margin-top:9px}
+  .paper.wip{background:transparent;border-style:dashed}
   footer{margin-top:30px;font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;color:var(--ink-faint);text-align:center}
   @media (prefers-reduced-motion:no-preference){
     .card>*{animation:rise .5s cubic-bezier(.2,.7,.3,1) backwards}
@@ -97,7 +107,7 @@
 
     <a class="lnk" href="https://arxiv.org/abs/2608.01436" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M6 5v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5M9 9h6M9 13h6M9 17h4"/></svg></span>
-      <span class="lnk-txt"><b>arXiv</b><small>Read the paper</small></span>
+      <span class="lnk-txt"><b>arXiv</b><small>Latest preprint</small></span>
       <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
     </a>
 
@@ -111,16 +121,46 @@
 
   <p class="label">Research</p>
   <p class="about">
-    Research on LLM behavior in <b>digital gender-based violence</b> scenarios, focusing on
-    framing bias, victim-blaming, consent interpretation, and refusal thresholds. Methods include
-    survey-based experiments, vignette design, qualitative discourse analysis, and comparative
-    model evaluation, with an emphasis on <b>AI safety, ethics, and gender justice</b>.
+    My doctoral research audits how large language models respond to <b>digital gender-based violence</b>:
+    whether they help perpetrators, how they advise victims, and whether their answers change with the
+    language, the framing or the person asking. I combine scenario and vignette design, minimal-pair
+    manipulation, multilingual testing across commercial AI systems and qualitative discourse analysis,
+    with an emphasis on <b>AI safety, ethics, and gender justice</b>.
   </p>
+
+  <p class="label">Preprints</p>
+  <div class="papers">
+    <a class="paper" href="https://arxiv.org/abs/2608.01436" target="_blank" rel="noopener">
+      <b>Same violence, different answer: How AI responds to coercive control against women across languages</b>
+      <span class="au"><u>Lyu Chang</u>, Sònia Estradé Albiol, Núria Vergés Bosch · arXiv:2608.01436 · 2026</span>
+      <span class="fd">Seven widely used language models, one coercive-control scenario, nine languages: whether a model names the control, counters self-blame and affirms the woman&rsquo;s agency varies by language and by developer origin.</span>
+      <span class="tag">Under review</span>
+    </a>
+    <a class="paper" href="https://arxiv.org/abs/2609.28479" target="_blank" rel="noopener">
+      <b>The Domestic Unprotected Zone: Algorithmic governance and the reproduction of perpetrator discourse in conversational AI</b>
+      <span class="au"><u>Lyu Chang</u>, Sònia Estradé Albiol, Núria Vergés Bosch · arXiv:2609.28479 · 2026</span>
+      <span class="fd">An audit of six conversational AI systems: four refused fewer than 1% of perpetrator-side prompts, and an intimate-partner framing raised non-refusal 4.4- to 10.8-fold.</span>
+      <span class="tag">Under review</span>
+    </a>
+  </div>
+
+  <p class="label">In progress</p>
+  <div class="papers">
+    <div class="paper wip">
+      <b>When deepfakes happen</b>
+      <span class="fd">How ChatGPT advises women content creators targeted by sexualised deepfakes.</span>
+    </div>
+    <div class="paper wip">
+      <b>Two-sided experiment</b>
+      <span class="fd">How language models judge the same incident of digital gender-based violence when it is told by the perpetrator and by the victim.</span>
+    </div>
+  </div>
 
   <p class="label">Education</p>
   <div class="edu">
-    <div><span class="deg">MSc, Comparative Social Change</span><span class="edu-meta">Trinity College Dublin &amp; University College Dublin · 2024–2025</span></div>
-    <div><span class="deg">BA, Computer Science</span><span class="edu-meta">Northeastern University, China · 2020–2024</span></div>
+    <div><span class="deg">PhD, Doctoral Programme in Physics</span><span class="edu-meta">Universitat de Barcelona · 2025–present</span></div>
+    <div><span class="deg">MSc, Comparative Social Change · Distinction</span><span class="edu-meta">Trinity College Dublin &amp; University College Dublin · 2024–2025</span></div>
+    <div><span class="deg">BE, Computer Science</span><span class="edu-meta">Northeastern University, China · 2020–2024</span></div>
   </div>
 
   <p class="label">Supervisors</p>
@@ -131,6 +171,14 @@
 
   <p class="label">Recent academic activity</p>
   <div class="activity">
+    <div class="venue">
+      <p class="vn">1st STS-CAT International Conference · Barcelona · Feb 2027</p>
+      <ul><li>When Language Shapes Digital Safety: AI Responses to Digital Gender-Based Violence<span>Accepted · Panel 3</span></li></ul>
+    </div>
+    <div class="venue">
+      <p class="vn">ICFO – The Institute of Photonic Sciences · Nov 2026</p>
+      <ul><li>Large Language Models and Digital Gender-Based Violence: Who Gets Protected?<span>Invited talk</span></li></ul>
+    </div>
     <div class="venue">
       <p class="vn">17th ESA Conference · Warsaw · Aug 2026</p>
       <ul>
@@ -149,6 +197,10 @@
     <div class="venue">
       <p class="vn">Historical Materialism · Barcelona · 2026</p>
       <ul><li>Confrontant les Violències Masclistes Digitals des de les aules de Sociologia<span>Co-author</span></li></ul>
+    </div>
+    <div class="venue">
+      <p class="vn">Master&rsquo;s in Sociology · Universitat de Barcelona · May 2026</p>
+      <ul><li>Digital gender-based violence and feminist theories<span>Guest lecture</span></li></ul>
     </div>
     <div class="venue">
       <p class="vn">Gender &amp; Science Seminar · UB Physics · Apr 2026</p>
